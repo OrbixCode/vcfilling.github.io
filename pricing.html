@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing</title>
+</head>
+
+<style>
+    .header-gXlGAu {
+    display: grid;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "logo msg";
+    padding: 0.5em 1em;
+    align-items: center;
+    height: 75px;
+    border-bottom: 1px solid rgb(241, 244, 246);
+}
+
+.header-ihjwIX {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.ctCpKm {
+    margin-right: 1em;
+    max-height: 35px;
+    cursor: pointer;
+}
+.choose-state-head{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+    color: rgb(15, 33, 55);
+    margin-top: 10px;
+}
+body {
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke: 0.45px rgba(0, 0, 0, 0.1);
+}
+
+.card-col {
+    width: 100%;
+    margin: 0px auto;
+    display: flex;
+    place-content: center;
+}
+
+.card-secx{
+    border-radius: 5px;
+    border: 1px solid rgb(241, 244, 246);
+    box-shadow: rgba(50, 50, 93, 0.07) 0px 1px 50px;
+    position: relative;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: auto;
+    transition: all 150ms ease-in 0s;
+    color: rgb(15, 33, 55);
+    width: 25%;
+}
+
+
+.card-secx .card-header-Pro {
+    text-align: center;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    background: url(https://app.jumpstartfilings.co/mosaic_pro.png) 0% 0% / 100% 100% no-repeat;
+    background-repeat: no-repeat;
+    padding: 17px 20px;
+}
+
+.gdlXWX {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgb(241, 244, 246);
+}
+
+.gdlXWX .card-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+.card-secx .price {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 66px;
+    text-align: center;
+    color: rgb(52, 61, 72);
+    margin: 10px 0px 0px;
+}
+
+.card-secx  .plan-description {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: rgb(52, 61, 72);
+    margin-bottom: 10px;
+}
+
+.gdlXWX .tooltip-description {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: rgb(189, 189, 189);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.card-secx .plan-description {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: rgb(52, 61, 72);
+    margin-bottom: 10px;
+}
+
+.card-secx .card-container {
+    padding: 0em 1.5em 1.5em;
+}
+
+.card-secx button {
+    padding: 0.75em 2.5em;
+    width: 100%;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(140, 20, 252);
+    border: 1px solid rgb(140, 20, 252);
+    padding: 16px 32px;
+    border-radius: 5px;
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.card-features{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgb(241, 244, 246);
+}
+
+.card-feature-item{
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px 50px;
+}
+
+.card-feature-item .img-container img {
+    width: 30px;
+}
+
+.card-feature-item .name {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    align-items: center;
+    color: rgb(52, 61, 72);
+    margin-left: 20px;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.card-features .hidding {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 150%;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: rgb(140, 20, 252);
+}
+.card-feature-item:nth-child(-n+4){
+    display:flex;
+}
+
+.full .card-feature-item {
+  display: flex;
+}
+
+.us-bank {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.us-bank .title {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.1em;
+    color: rgb(52, 61, 72);
+    margin-left: 20px;
+    margin-bottom: 35px;
+    margin-top: 10px;
+}
+
+.us-bank .container {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 20px;
+}
+
+.us-bank .checkbox {
+    grid-template-columns: min-content auto;
+    gap: 0.5em;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    color: rgb(52, 61, 72);
+}
+
+.us-bank .checkbox__input {
+    display: grid;
+    grid-template-areas: "checkbox";
+}
+
+.us-bank img {
+    max-width: 30px;
+}
+
+.us-bank .checkbox {
+    grid-template-columns: min-content auto;
+    gap: 0.5em;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    color: rgb(52, 61, 72);
+}
+
+.us-bank .price {
+    font-style: normal;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 800;
+    margin-top: 0px;
+}
+
+.pricing-bt-instr{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: rgb(52, 61, 72);
+    margin: 10px 0px;
+}
+
+.footer-bdBYcX {
+    font-size: 16px;
+    color: rgb(51, 51, 51);
+    font-weight: normal;
+    letter-spacing: -0.3px;
+    line-height: 26px;
+    text-overflow: ellipsis;
+    white-space-collapse: initial;
+    text-wrap: wrap;
+    -webkit-font-smoothing: antialiased !important;
+    text-rendering: optimizelegibility !important;
+    overflow: hidden;
+}
+
+.pricing-footer-col-1{
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+
+.pricing-footer-col-2{
+    display: grid;
+}
+
+.pricing-footer-row{
+    display: flex;
+    justify-content: space-between
+}
+
+.state-form-input{
+    padding: 0.75em;
+    font-family: Avenir, sans-serif;
+    border: 1px solid rgb(223, 228, 234);
+    border-radius: 5px;
+    width: 100%;
+    appearance: none;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-bottom: 2rem;
+    margin-left: 10px;
+}
+
+.state-label-text{
+}
+
+.state-group-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.state-group-form .form-group{
+    display: inline-flex;
+}
+
+
+
+@media only screen and (max-width: 1100px) {
+    .card-secx {
+    width: 40%;
+}
+}
+
+@media only screen and (max-width: 950px) {
+    .card-secx {
+    width: 45%;
+}
+}
+
+@media only screen and (max-width: 800px) {
+    .card-secx {
+    width: 55%;
+}
+}
+
+@media only screen and (max-width: 650px) {
+    .card-secx {
+    width: 65%;
+}
+.state-group-form{
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+}
+
+@media only screen and (max-width: 550px) {
+    .card-secx {
+    width: 90%;
+}
+}
+</style>
+<body>
+    
+<header class="header-gXlGAu">
+    <div class="Hheader-ihjwIX ">
+        <div class="lazyload-wrapper ">
+            <a href="#">
+                <img src="https://app.jumpstartfilings.co/logo@3x.png" alt="logo" class="Header__LogoImg-sc-18d9az9-6 ctCpKm">
+            </a>
+       </div>
+    </div>
+</header>
+
+<div class="choose-state-head">
+    Choose your state and entity:
+</div>
+
+<div class="state-group-form">
+
+    <!-- forming -->
+<div class="form-group">
+    <label class="control-label">
+        <p class="state-label-text">Forming a </p>
+    </label>
+
+    <div class="dropdown">
+        <div class="dropdown">
+            <input type="text" id="genderInput" class="state-form-input"  placeholder="Limited Liability Compan...">
+            <div class="dropdown-content" id="genderDropdown"></div>
+          </div>
+      </div>
+
+</div>
+    <div class="icon" style="margin-left:15px;     margin-top: -50px; cursor: pointer;">
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="#BDBDBD" xmlns="http://www.w3.org/2000/svg"><path d="M5.768 11.536c-.793 0-1.54-.15-2.24-.448A5.934 5.934 0 011.68 9.856 5.934 5.934 0 01.448 8.008 5.648 5.648 0 010 5.768c0-.803.15-1.55.448-2.24.299-.7.71-1.311 1.232-1.834A5.816 5.816 0 013.528.448 5.648 5.648 0 015.768 0c.803 0 1.55.15 2.24.448.7.299 1.311.714 1.834 1.246a5.655 5.655 0 011.246 1.834c.299.69.448 1.437.448 2.24 0 .793-.15 1.54-.448 2.24a5.816 5.816 0 01-1.246 1.848 5.766 5.766 0 01-1.834 1.232 5.582 5.582 0 01-2.24.448zm0-.784c.69 0 1.335-.126 1.932-.378a5.071 5.071 0 001.596-1.078 4.922 4.922 0 001.064-1.582 4.867 4.867 0 00.392-1.946c0-.69-.13-1.335-.392-1.932a4.882 4.882 0 00-2.66-2.66A4.767 4.767 0 005.768.784c-.69 0-1.34.13-1.946.392A4.922 4.922 0 002.24 2.24c-.457.457-.817.99-1.078 1.596a4.919 4.919 0 00-.378 1.932c0 .69.126 1.34.378 1.946.261.597.62 1.125 1.078 1.582.457.457.985.817 1.582 1.078a5.022 5.022 0 001.946.378zm0-7.35c-.373 0-.56-.182-.56-.546 0-.364.187-.546.56-.546.15 0 .275.047.378.14.112.084.168.22.168.406 0 .187-.056.327-.168.42a.577.577 0 01-.378.126zm-.462 5.152V4.046h.924v4.508h-.924z" fill="#BDBDBD"></path></svg>
+    </div>
+
+<!-- state in -->
+    <div class="form-group">
+        <label class="control-label">
+            <p class="state-label-text">in </p>
+        </label>
+    
+        <div class="dropdown">
+            <div class="dropdown">
+                <input type="text" id="genderInput" class="state-form-input"  placeholder="Wyoming">
+                <div class="dropdown-content" id="genderDropdown"></div>
+              </div>
+          </div>
+    
+    </div>
+        <div class="icon" style="margin-left:15px;     margin-top: -50px; cursor: pointer;">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="#BDBDBD" xmlns="http://www.w3.org/2000/svg"><path d="M5.768 11.536c-.793 0-1.54-.15-2.24-.448A5.934 5.934 0 011.68 9.856 5.934 5.934 0 01.448 8.008 5.648 5.648 0 010 5.768c0-.803.15-1.55.448-2.24.299-.7.71-1.311 1.232-1.834A5.816 5.816 0 013.528.448 5.648 5.648 0 015.768 0c.803 0 1.55.15 2.24.448.7.299 1.311.714 1.834 1.246a5.655 5.655 0 011.246 1.834c.299.69.448 1.437.448 2.24 0 .793-.15 1.54-.448 2.24a5.816 5.816 0 01-1.246 1.848 5.766 5.766 0 01-1.834 1.232 5.582 5.582 0 01-2.24.448zm0-.784c.69 0 1.335-.126 1.932-.378a5.071 5.071 0 001.596-1.078 4.922 4.922 0 001.064-1.582 4.867 4.867 0 00.392-1.946c0-.69-.13-1.335-.392-1.932a4.882 4.882 0 00-2.66-2.66A4.767 4.767 0 005.768.784c-.69 0-1.34.13-1.946.392A4.922 4.922 0 002.24 2.24c-.457.457-.817.99-1.078 1.596a4.919 4.919 0 00-.378 1.932c0 .69.126 1.34.378 1.946.261.597.62 1.125 1.078 1.582.457.457.985.817 1.582 1.078a5.022 5.022 0 001.946.378zm0-7.35c-.373 0-.56-.182-.56-.546 0-.364.187-.546.56-.546.15 0 .275.047.378.14.112.084.168.22.168.406 0 .187-.056.327-.168.42a.577.577 0 01-.378.126zm-.462 5.152V4.046h.924v4.508h-.924z" fill="#BDBDBD"></path></svg>
+        </div>
+</div>
+
+<div class="card-col">
+            <div class="card-secx">
+                <div class="gdlXWX">
+                    <div class="card-header-Pro">
+
+                    </div>
+
+                       <div>
+                        <h1 class="price">$399</h1>
+                        <p class="plan-description">Billed Once*</p>
+                        <p class="tooltip-description">Includes all state filing fees
+                        <span data-tip="true" data-for="stateFee" class="icon">
+                            <svg width="13" height="13" viewBox="0 0 13 13" fill="#BDBDBD" xmlns="http://www.w3.org/2000/svg"><path d="M5.768 11.536c-.793 0-1.54-.15-2.24-.448A5.934 5.934 0 011.68 9.856 5.934 5.934 0 01.448 8.008 5.648 5.648 0 010 5.768c0-.803.15-1.55.448-2.24.299-.7.71-1.311 1.232-1.834A5.816 5.816 0 013.528.448 5.648 5.648 0 015.768 0c.803 0 1.55.15 2.24.448.7.299 1.311.714 1.834 1.246a5.655 5.655 0 011.246 1.834c.299.69.448 1.437.448 2.24 0 .793-.15 1.54-.448 2.24a5.816 5.816 0 01-1.246 1.848 5.766 5.766 0 01-1.834 1.232 5.582 5.582 0 01-2.24.448zm0-.784c.69 0 1.335-.126 1.932-.378a5.071 5.071 0 001.596-1.078 4.922 4.922 0 001.064-1.582 4.867 4.867 0 00.392-1.946c0-.69-.13-1.335-.392-1.932a4.882 4.882 0 00-2.66-2.66A4.767 4.767 0 005.768.784c-.69 0-1.34.13-1.946.392A4.922 4.922 0 002.24 2.24c-.457.457-.817.99-1.078 1.596a4.919 4.919 0 00-.378 1.932c0 .69.126 1.34.378 1.946.261.597.62 1.125 1.078 1.582.457.457.985.817 1.582 1.078a5.022 5.022 0 001.946.378zm0-7.35c-.373 0-.56-.182-.56-.546 0-.364.187-.546.56-.546.15 0 .275.047.378.14.112.084.168.22.168.406 0 .187-.056.327-.168.42a.577.577 0 01-.378.126zm-.462 5.152V4.046h.924v4.508h-.924z" fill="#BDBDBD"></path>
+                            </svg>
+                        </span>
+                        </p>
+                        <p class="plan-description">Form Instantly</p>
+                        </div>
+
+                        <div class="card-container">
+                            <div class="card-body">
+                                <div class="button-Pro" style="width: 85%; display: flex; justify-content: center; margin: auto;">
+                                    <button id="getStarted-Pro">
+                                        <div class="pvw-title">
+                                            <span>Launch My Company</span>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="StyledComponents__ServicesContainer-sc-cqev1w-5 card-features" id="card-features">
+                    <div style="height: 15px;"></div>
+
+                        <div class="card-feature-item">
+                            <div class="img-container"><img src="https://app.jumpstartfilings.co/services/prepare-file.png">
+                            </div><p class="name">Prepare and File LLC</p>
+                            <div class="icon">
+                                <svg width="13" height="13" viewBox="0 0 13 13" fill="#8C14FC" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.768 11.536c-.793 0-1.54-.15-2.24-.448A5.934 5.934 0 011.68 9.856 5.934 5.934 0 01.448 8.008 5.648 5.648 0 010 5.768c0-.803.15-1.55.448-2.24.299-.7.71-1.311 1.232-1.834A5.816 5.816 0 013.528.448 5.648 5.648 0 015.768 0c.803 0 1.55.15 2.24.448.7.299 1.311.714 1.834 1.246a5.655 5.655 0 011.246 1.834c.299.69.448 1.437.448 2.24 0 .793-.15 1.54-.448 2.24a5.816 5.816 0 01-1.246 1.848 5.766 5.766 0 01-1.834 1.232 5.582 5.582 0 01-2.24.448zm0-.784c.69 0 1.335-.126 1.932-.378a5.071 5.071 0 001.596-1.078 4.922 4.922 0 001.064-1.582 4.867 4.867 0 00.392-1.946c0-.69-.13-1.335-.392-1.932a4.882 4.882 0 00-2.66-2.66A4.767 4.767 0 005.768.784c-.69 0-1.34.13-1.946.392A4.922 4.922 0 002.24 2.24c-.457.457-.817.99-1.078 1.596a4.919 4.919 0 00-.378 1.932c0 .69.126 1.34.378 1.946.261.597.62 1.125 1.078 1.582.457.457.985.817 1.582 1.078a5.022 5.022 0 001.946.378zm0-7.35c-.373 0-.56-.182-.56-.546 0-.364.187-.546.56-.546.15 0 .275.047.378.14.112.084.168.22.168.406 0 .187-.056.327-.168.42a.577.577 0 01-.378.126zm-.462 5.152V4.046h.924v4.508h-.924z" fill="#8C14FC"></path>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="card-feature-item">
+                            <div class="img-container">
+                                <img src="https://app.jumpstartfilings.co/services/employer-id.png">
+                            </div>
+                            <p class="name">Employer ID Number (EIN)</p>
+                            <div class="icon">
+                                <svg width="13" height="13" viewBox="0 0 13 13" fill="#8C14FC" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.768 11.536c-.793 0-1.54-.15-2.24-.448A5.934 5.934 0 011.68 9.856 5.934 5.934 0 01.448 8.008 5.648 5.648 0 010 5.768c0-.803.15-1.55.448-2.24.299-.7.71-1.311 1.232-1.834A5.816 5.816 0 013.528.448 5.648 5.648 0 015.768 0c.803 0 1.55.15 2.24.448.7.299 1.311.714 1.834 1.246a5.655 5.655 0 011.246 1.834c.299.69.448 1.437.448 2.24 0 .793-.15 1.54-.448 2.24a5.816 5.816 0 01-1.246 1.848 5.766 5.766 0 01-1.834 1.232 5.582 5.582 0 01-2.24.448zm0-.784c.69 0 1.335-.126 1.932-.378a5.071 5.071 0 001.596-1.078 4.922 4.922 0 001.064-1.582 4.867 4.867 0 00.392-1.946c0-.69-.13-1.335-.392-1.932a4.882 4.882 0 00-2.66-2.66A4.767 4.767 0 005.768.784c-.69 0-1.34.13-1.946.392A4.922 4.922 0 002.24 2.24c-.457.457-.817.99-1.078 1.596a4.919 4.919 0 00-.378 1.932c0 .69.126 1.34.378 1.946.261.597.62 1.125 1.078 1.582.457.457.985.817 1.582 1.078a5.022 5.022 0 001.946.378zm0-7.35c-.373 0-.56-.182-.56-.546 0-.364.187-.546.56-.546.15 0 .275.047.378.14.112.084.168.22.168.406 0 .187-.056.327-.168.42a.577.577 0 01-.378.126zm-.462 5.152V4.046h.924v4.508h-.924z" fill="#8C14FC"></path>
+                            </svg>
+                          </div>
+                       </div>
+
+                    <div class="card-feature-item">
+                        <div class="img-container">
+                            <img src="https://app.jumpstartfilings.co/services/email-support.png">
+                        </div>
+                        <p class="name">Same Day Email Support</p>
+                        <div class="icon">
+                            <svg width="13" height="13" viewBox="0 0 13 13" fill="#8C14FC" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.768 11.536c-.793 0-1.54-.15-2.24-.448A5.934 5.934 0 011.68 9.856 5.934 5.934 0 01.448 8.008 5.648 5.648 0 010 5.768c0-.803.15-1.55.448-2.24.299-.7.71-1.311 1.232-1.834A5.816 5.816 0 013.528.448 5.648 5.648 0 015.768 0c.803 0 1.55.15 2.24.448.7.299 1.311.714 1.834 1.246a5.655 5.655 0 011.246 1.834c.299.69.448 1.437.448 2.24 0 .793-.15 1.54-.448 2.24a5.816 5.816 0 01-1.246 1.848 5.766 5.766 0 01-1.834 1.232 5.582 5.582 0 01-2.24.448zm0-.784c.69 0 1.335-.126 1.932-.378a5.071 5.071 0 001.596-1.078 4.922 4.922 0 001.064-1.582 4.867 4.867 0 00.392-1.946c0-.69-.13-1.335-.392-1.932a4.882 4.882 0 00-2.66-2.66A4.767 4.767 0 005.768.784c-.69 0-1.34.13-1.946.392A4.922 4.922 0 002.24 2.24c-.457.457-.817.99-1.078 1.596a4.919 4.919 0 00-.378 1.932c0 .69.126 1.34.378 1.946.261.597.62 1.125 1.078 1.582.457.457.985.817 1.582 1.078a5.022 5.022 0 001.946.378zm0-7.35c-.373 0-.56-.182-.56-.546 0-.364.187-.546.56-.546.15 0 .275.047.378.14.112.084.168.22.168.406 0 .187-.056.327-.168.42a.577.577 0 01-.378.126zm-.462 5.152V4.046h.924v4.508h-.924z" fill="#8C14FC"></path></svg>
+                            </div>
+                    </div>
+                    
+                    <div class="card-feature-item">
+                        <div class="img-container">
+                            <img src="https://app.jumpstartfilings.co/services/registered-agent.png">
+                        </div>
+                        <p class="name">Registered Agent</p>
+                        <div class="icon">
+                            <svg width="13" height="13" viewBox="0 0 13 13" fill="#8C14FC" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.768 11.536c-.793 0-1.54-.15-2.24-.448A5.934 5.934 0 011.68 9.856 5.934 5.934 0 01.448 8.008 5.648 5.648 0 010 5.768c0-.803.15-1.55.448-2.24.299-.7.71-1.311 1.232-1.834A5.816 5.816 0 013.528.448 5.648 5.648 0 015.768 0c.803 0 1.55.15 2.24.448.7.299 1.311.714 1.834 1.246a5.655 5.655 0 011.246 1.834c.299.69.448 1.437.448 2.24 0 .793-.15 1.54-.448 2.24a5.816 5.816 0 01-1.246 1.848 5.766 5.766 0 01-1.834 1.232 5.582 5.582 0 01-2.24.448zm0-.784c.69 0 1.335-.126 1.932-.378a5.071 5.071 0 001.596-1.078 4.922 4.922 0 001.064-1.582 4.867 4.867 0 00.392-1.946c0-.69-.13-1.335-.392-1.932a4.882 4.882 0 00-2.66-2.66A4.767 4.767 0 005.768.784c-.69 0-1.34.13-1.946.392A4.922 4.922 0 002.24 2.24c-.457.457-.817.99-1.078 1.596a4.919 4.919 0 00-.378 1.932c0 .69.126 1.34.378 1.946.261.597.62 1.125 1.078 1.582.457.457.985.817 1.582 1.078a5.022 5.022 0 001.946.378zm0-7.35c-.373 0-.56-.182-.56-.546 0-.364.187-.546.56-.546.15 0 .275.047.378.14.112.084.168.22.168.406 0 .187-.056.327-.168.42a.577.577 0 01-.378.126zm-.462 5.152V4.046h.924v4.508h-.924z" fill="#8C14FC"></path></svg>
+                            </div>
+                    </div>
+
+                    <div class="card-feature-item">
+                        <div class="img-container">
+                            <img src="https://app.jumpstartfilings.co/services/register-agent-address.png">
+                        </div>
+                        <p class="name">Registered Agent Address</p>
+                        <div class="icon">
+                            <svg width="13" height="13" viewBox="0 0 13 13" fill="#8C14FC" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.768 11.536c-.793 0-1.54-.15-2.24-.448A5.934 5.934 0 011.68 9.856 5.934 5.934 0 01.448 8.008 5.648 5.648 0 010 5.768c0-.803.15-1.55.448-2.24.299-.7.71-1.311 1.232-1.834A5.816 5.816 0 013.528.448 5.648 5.648 0 015.768 0c.803 0 1.55.15 2.24.448.7.299 1.311.714 1.834 1.246a5.655 5.655 0 011.246 1.834c.299.69.448 1.437.448 2.24 0 .793-.15 1.54-.448 2.24a5.816 5.816 0 01-1.246 1.848 5.766 5.766 0 01-1.834 1.232 5.582 5.582 0 01-2.24.448zm0-.784c.69 0 1.335-.126 1.932-.378a5.071 5.071 0 001.596-1.078 4.922 4.922 0 001.064-1.582 4.867 4.867 0 00.392-1.946c0-.69-.13-1.335-.392-1.932a4.882 4.882 0 00-2.66-2.66A4.767 4.767 0 005.768.784c-.69 0-1.34.13-1.946.392A4.922 4.922 0 002.24 2.24c-.457.457-.817.99-1.078 1.596a4.919 4.919 0 00-.378 1.932c0 .69.126 1.34.378 1.946.261.597.62 1.125 1.078 1.582.457.457.985.817 1.582 1.078a5.022 5.022 0 001.946.378zm0-7.35c-.373 0-.56-.182-.56-.546 0-.364.187-.546.56-.546.15 0 .275.047.378.14.112.084.168.22.168.406 0 .187-.056.327-.168.42a.577.577 0 01-.378.126zm-.462 5.152V4.046h.924v4.508h-.924z" fill="#8C14FC"></path></svg>
+                            </div>
+                    </div>
+
+
+                    <div class="card-feature-item">
+                        <div class="img-container">
+                            <img src="https://app.jumpstartfilings.co/services/operating-agreement.png">
+                        </div>
+                        <p class="name">Operating Agreement</p>
+                        <div class="icon">
+                            <svg width="13" height="13" viewBox="0 0 13 13" fill="#8C14FC" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.768 11.536c-.793 0-1.54-.15-2.24-.448A5.934 5.934 0 011.68 9.856 5.934 5.934 0 01.448 8.008 5.648 5.648 0 010 5.768c0-.803.15-1.55.448-2.24.299-.7.71-1.311 1.232-1.834A5.816 5.816 0 013.528.448 5.648 5.648 0 015.768 0c.803 0 1.55.15 2.24.448.7.299 1.311.714 1.834 1.246a5.655 5.655 0 011.246 1.834c.299.69.448 1.437.448 2.24 0 .793-.15 1.54-.448 2.24a5.816 5.816 0 01-1.246 1.848 5.766 5.766 0 01-1.834 1.232 5.582 5.582 0 01-2.24.448zm0-.784c.69 0 1.335-.126 1.932-.378a5.071 5.071 0 001.596-1.078 4.922 4.922 0 001.064-1.582 4.867 4.867 0 00.392-1.946c0-.69-.13-1.335-.392-1.932a4.882 4.882 0 00-2.66-2.66A4.767 4.767 0 005.768.784c-.69 0-1.34.13-1.946.392A4.922 4.922 0 002.24 2.24c-.457.457-.817.99-1.078 1.596a4.919 4.919 0 00-.378 1.932c0 .69.126 1.34.378 1.946.261.597.62 1.125 1.078 1.582.457.457.985.817 1.582 1.078a5.022 5.022 0 001.946.378zm0-7.35c-.373 0-.56-.182-.56-.546 0-.364.187-.546.56-.546.15 0 .275.047.378.14.112.084.168.22.168.406 0 .187-.056.327-.168.42a.577.577 0 01-.378.126zm-.462 5.152V4.046h.924v4.508h-.924z" fill="#8C14FC"></path></svg>
+                            </div>
+                    </div>
+
+                    <div class="card-feature-item">
+                        <div class="img-container">
+                            <img src="https://app.jumpstartfilings.co/services/name-availability.png">
+                        </div>
+                        <p class="name">Name Availability Search</p>
+                        <div class="icon">
+                            <svg width="13" height="13" viewBox="0 0 13 13" fill="#8C14FC" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.768 11.536c-.793 0-1.54-.15-2.24-.448A5.934 5.934 0 011.68 9.856 5.934 5.934 0 01.448 8.008 5.648 5.648 0 010 5.768c0-.803.15-1.55.448-2.24.299-.7.71-1.311 1.232-1.834A5.816 5.816 0 013.528.448 5.648 5.648 0 015.768 0c.803 0 1.55.15 2.24.448.7.299 1.311.714 1.834 1.246a5.655 5.655 0 011.246 1.834c.299.69.448 1.437.448 2.24 0 .793-.15 1.54-.448 2.24a5.816 5.816 0 01-1.246 1.848 5.766 5.766 0 01-1.834 1.232 5.582 5.582 0 01-2.24.448zm0-.784c.69 0 1.335-.126 1.932-.378a5.071 5.071 0 001.596-1.078 4.922 4.922 0 001.064-1.582 4.867 4.867 0 00.392-1.946c0-.69-.13-1.335-.392-1.932a4.882 4.882 0 00-2.66-2.66A4.767 4.767 0 005.768.784c-.69 0-1.34.13-1.946.392A4.922 4.922 0 002.24 2.24c-.457.457-.817.99-1.078 1.596a4.919 4.919 0 00-.378 1.932c0 .69.126 1.34.378 1.946.261.597.62 1.125 1.078 1.582.457.457.985.817 1.582 1.078a5.022 5.022 0 001.946.378zm0-7.35c-.373 0-.56-.182-.56-.546 0-.364.187-.546.56-.546.15 0 .275.047.378.14.112.084.168.22.168.406 0 .187-.056.327-.168.42a.577.577 0 01-.378.126zm-.462 5.152V4.046h.924v4.508h-.924z" fill="#8C14FC"></path></svg>
+                            </div>
+                    </div>
+
+                    <div class="card-feature-item">
+                        <div class="img-container">
+                            <img src="https://app.jumpstartfilings.co/services/online-document.png">
+                        </div>
+                        <p class="name">Online Document Access</p>
+                        <div class="icon">
+                            <svg width="13" height="13" viewBox="0 0 13 13" fill="#8C14FC" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.768 11.536c-.793 0-1.54-.15-2.24-.448A5.934 5.934 0 011.68 9.856 5.934 5.934 0 01.448 8.008 5.648 5.648 0 010 5.768c0-.803.15-1.55.448-2.24.299-.7.71-1.311 1.232-1.834A5.816 5.816 0 013.528.448 5.648 5.648 0 015.768 0c.803 0 1.55.15 2.24.448.7.299 1.311.714 1.834 1.246a5.655 5.655 0 011.246 1.834c.299.69.448 1.437.448 2.24 0 .793-.15 1.54-.448 2.24a5.816 5.816 0 01-1.246 1.848 5.766 5.766 0 01-1.834 1.232 5.582 5.582 0 01-2.24.448zm0-.784c.69 0 1.335-.126 1.932-.378a5.071 5.071 0 001.596-1.078 4.922 4.922 0 001.064-1.582 4.867 4.867 0 00.392-1.946c0-.69-.13-1.335-.392-1.932a4.882 4.882 0 00-2.66-2.66A4.767 4.767 0 005.768.784c-.69 0-1.34.13-1.946.392A4.922 4.922 0 002.24 2.24c-.457.457-.817.99-1.078 1.596a4.919 4.919 0 00-.378 1.932c0 .69.126 1.34.378 1.946.261.597.62 1.125 1.078 1.582.457.457.985.817 1.582 1.078a5.022 5.022 0 001.946.378zm0-7.35c-.373 0-.56-.182-.56-.546 0-.364.187-.546.56-.546.15 0 .275.047.378.14.112.084.168.22.168.406 0 .187-.056.327-.168.42a.577.577 0 01-.378.126zm-.462 5.152V4.046h.924v4.508h-.924z" fill="#8C14FC"></path></svg>
+                            </div>
+                    </div>
+
+                    <div class="card-feature-item">
+                        <div class="img-container">
+                            <img src="https://app.jumpstartfilings.co/services/statement-organizer.png">
+                        </div>
+                        <p class="name">Statement of Organizer</p>
+                        <div class="icon">
+                            <svg width="13" height="13" viewBox="0 0 13 13" fill="#8C14FC" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.768 11.536c-.793 0-1.54-.15-2.24-.448A5.934 5.934 0 011.68 9.856 5.934 5.934 0 01.448 8.008 5.648 5.648 0 010 5.768c0-.803.15-1.55.448-2.24.299-.7.71-1.311 1.232-1.834A5.816 5.816 0 013.528.448 5.648 5.648 0 015.768 0c.803 0 1.55.15 2.24.448.7.299 1.311.714 1.834 1.246a5.655 5.655 0 011.246 1.834c.299.69.448 1.437.448 2.24 0 .793-.15 1.54-.448 2.24a5.816 5.816 0 01-1.246 1.848 5.766 5.766 0 01-1.834 1.232 5.582 5.582 0 01-2.24.448zm0-.784c.69 0 1.335-.126 1.932-.378a5.071 5.071 0 001.596-1.078 4.922 4.922 0 001.064-1.582 4.867 4.867 0 00.392-1.946c0-.69-.13-1.335-.392-1.932a4.882 4.882 0 00-2.66-2.66A4.767 4.767 0 005.768.784c-.69 0-1.34.13-1.946.392A4.922 4.922 0 002.24 2.24c-.457.457-.817.99-1.078 1.596a4.919 4.919 0 00-.378 1.932c0 .69.126 1.34.378 1.946.261.597.62 1.125 1.078 1.582.457.457.985.817 1.582 1.078a5.022 5.022 0 001.946.378zm0-7.35c-.373 0-.56-.182-.56-.546 0-.364.187-.546.56-.546.15 0 .275.047.378.14.112.084.168.22.168.406 0 .187-.056.327-.168.42a.577.577 0 01-.378.126zm-.462 5.152V4.046h.924v4.508h-.924z" fill="#8C14FC"></path></svg>
+                            </div>
+                    </div>
+
+                    <div class="card-feature-item">
+                        <div class="img-container">
+                            <img src="https://app.jumpstartfilings.co/services/rush-filing.png">
+                        </div>
+                        <p class="name">Rush filing service</p>
+                        <div class="icon">
+                            <svg width="13" height="13" viewBox="0 0 13 13" fill="#8C14FC" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.768 11.536c-.793 0-1.54-.15-2.24-.448A5.934 5.934 0 011.68 9.856 5.934 5.934 0 01.448 8.008 5.648 5.648 0 010 5.768c0-.803.15-1.55.448-2.24.299-.7.71-1.311 1.232-1.834A5.816 5.816 0 013.528.448 5.648 5.648 0 015.768 0c.803 0 1.55.15 2.24.448.7.299 1.311.714 1.834 1.246a5.655 5.655 0 011.246 1.834c.299.69.448 1.437.448 2.24 0 .793-.15 1.54-.448 2.24a5.816 5.816 0 01-1.246 1.848 5.766 5.766 0 01-1.834 1.232 5.582 5.582 0 01-2.24.448zm0-.784c.69 0 1.335-.126 1.932-.378a5.071 5.071 0 001.596-1.078 4.922 4.922 0 001.064-1.582 4.867 4.867 0 00.392-1.946c0-.69-.13-1.335-.392-1.932a4.882 4.882 0 00-2.66-2.66A4.767 4.767 0 005.768.784c-.69 0-1.34.13-1.946.392A4.922 4.922 0 002.24 2.24c-.457.457-.817.99-1.078 1.596a4.919 4.919 0 00-.378 1.932c0 .69.126 1.34.378 1.946.261.597.62 1.125 1.078 1.582.457.457.985.817 1.582 1.078a5.022 5.022 0 001.946.378zm0-7.35c-.373 0-.56-.182-.56-.546 0-.364.187-.546.56-.546.15 0 .275.047.378.14.112.084.168.22.168.406 0 .187-.056.327-.168.42a.577.577 0 01-.378.126zm-.462 5.152V4.046h.924v4.508h-.924z" fill="#8C14FC"></path></svg>
+                            </div>
+                    </div>
+
+                    <div class="card-feature-item">
+                        <div class="img-container">
+                            <img src="https://app.jumpstartfilings.co/services/cpa-assessment.png">
+                        </div>
+                        <p class="name">CPA Assessment</p>
+                        <div class="icon">
+                            <svg width="13" height="13" viewBox="0 0 13 13" fill="#8C14FC" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.768 11.536c-.793 0-1.54-.15-2.24-.448A5.934 5.934 0 011.68 9.856 5.934 5.934 0 01.448 8.008 5.648 5.648 0 010 5.768c0-.803.15-1.55.448-2.24.299-.7.71-1.311 1.232-1.834A5.816 5.816 0 013.528.448 5.648 5.648 0 015.768 0c.803 0 1.55.15 2.24.448.7.299 1.311.714 1.834 1.246a5.655 5.655 0 011.246 1.834c.299.69.448 1.437.448 2.24 0 .793-.15 1.54-.448 2.24a5.816 5.816 0 01-1.246 1.848 5.766 5.766 0 01-1.834 1.232 5.582 5.582 0 01-2.24.448zm0-.784c.69 0 1.335-.126 1.932-.378a5.071 5.071 0 001.596-1.078 4.922 4.922 0 001.064-1.582 4.867 4.867 0 00.392-1.946c0-.69-.13-1.335-.392-1.932a4.882 4.882 0 00-2.66-2.66A4.767 4.767 0 005.768.784c-.69 0-1.34.13-1.946.392A4.922 4.922 0 002.24 2.24c-.457.457-.817.99-1.078 1.596a4.919 4.919 0 00-.378 1.932c0 .69.126 1.34.378 1.946.261.597.62 1.125 1.078 1.582.457.457.985.817 1.582 1.078a5.022 5.022 0 001.946.378zm0-7.35c-.373 0-.56-.182-.56-.546 0-.364.187-.546.56-.546.15 0 .275.047.378.14.112.084.168.22.168.406 0 .187-.056.327-.168.42a.577.577 0 01-.378.126zm-.462 5.152V4.046h.924v4.508h-.924z" fill="#8C14FC"></path></svg>
+                            </div>
+                    </div>
+
+                    <div class="card-feature-item">
+                        <div class="img-container">
+                            <img src="https://app.jumpstartfilings.co/services/chat-support.png">
+                        </div>
+                        <p class="name">Chat Support</p>
+                        <div class="icon">
+                            <svg width="13" height="13" viewBox="0 0 13 13" fill="#8C14FC" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.768 11.536c-.793 0-1.54-.15-2.24-.448A5.934 5.934 0 011.68 9.856 5.934 5.934 0 01.448 8.008 5.648 5.648 0 010 5.768c0-.803.15-1.55.448-2.24.299-.7.71-1.311 1.232-1.834A5.816 5.816 0 013.528.448 5.648 5.648 0 015.768 0c.803 0 1.55.15 2.24.448.7.299 1.311.714 1.834 1.246a5.655 5.655 0 011.246 1.834c.299.69.448 1.437.448 2.24 0 .793-.15 1.54-.448 2.24a5.816 5.816 0 01-1.246 1.848 5.766 5.766 0 01-1.834 1.232 5.582 5.582 0 01-2.24.448zm0-.784c.69 0 1.335-.126 1.932-.378a5.071 5.071 0 001.596-1.078 4.922 4.922 0 001.064-1.582 4.867 4.867 0 00.392-1.946c0-.69-.13-1.335-.392-1.932a4.882 4.882 0 00-2.66-2.66A4.767 4.767 0 005.768.784c-.69 0-1.34.13-1.946.392A4.922 4.922 0 002.24 2.24c-.457.457-.817.99-1.078 1.596a4.919 4.919 0 00-.378 1.932c0 .69.126 1.34.378 1.946.261.597.62 1.125 1.078 1.582.457.457.985.817 1.582 1.078a5.022 5.022 0 001.946.378zm0-7.35c-.373 0-.56-.182-.56-.546 0-.364.187-.546.56-.546.15 0 .275.047.378.14.112.084.168.22.168.406 0 .187-.056.327-.168.42a.577.577 0 01-.378.126zm-.462 5.152V4.046h.924v4.508h-.924z" fill="#8C14FC"></path></svg>
+                            </div>
+                    </div>
+
+                    <div class="hidding" id="hidding-feature">VIEW ALL FEATURES</div>
+                </div>
+                <div class="us-bank"><div class="title">OPTIONAL ADD-ONS</div>
+                <div>
+                    <div class="container"><label class="checkbox"><span class="checkbox__input">
+                        <input type="checkbox" name="checkbox" checked=""><span class="checkbox__control">
+                            <!-- <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="15" height="15" rx="3.5" fill="#8C14FC" stroke="white"></rect><path d="M5.69471 7.28071C5.50611 7.09855 5.25351 6.99776 4.99131 7.00004C4.72911 7.00232 4.4783 7.10749 4.29289 7.29289C4.10749 7.4783 4.00232 7.72911 4.00004 7.99131C3.99776 8.25351 4.09855 8.50611 4.28071 8.69471L6.28071 10.6947C6.46824 10.8822 6.72255 10.9875 6.98771 10.9875C7.25288 10.9875 7.50718 10.8822 7.69471 10.6947L11.6947 6.69471C11.8769 6.50611 11.9777 6.25351 11.9754 5.99131C11.9731 5.72911 11.8679 5.4783 11.6825 5.29289C11.4971 5.10749 11.2463 5.00232 10.9841 5.00004C10.7219 4.99776 10.4693 5.09855 10.2807 5.28071L6.98771 8.57371L5.69471 7.28071Z" fill="white"></path>
+                            </svg> -->
+                        </span>
+                    </span>
+                            <div class="img-container">
+                                <img src="https://assets.jumpstartfilings.com/usBank.png"></div>
+                                <span class="radio__label">US Bank Account<span> - </span>
+                                <span class="price">Free</span>
+                                <span class="price">
+                                </span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <label class="message"></label>
+
+ </div>
+<br>
+ <div class="pricing-bt-instr">You may elect for the service in your account. Standard EIN service takes approximately two to three weeks.</div>
+ <div class="pricing-bt-instr">* U.S. bank accounts are subject to our financial partner's approval.</div>
+
+  <div class="row pricing-footer-row">
+        <div class="col-md-3  col-12 pricing-footer-col-1">
+                <a href="https://jumpstartfilings.com/"><img src="https://app.jumpstartfilings.co/logo@3x.png" height="35px"></a>
+                <p class="P-sc-1hlde52-0 footer-bdBYcX" style="margin-top: 1em; cursor: none;">Launch your dream company today</p>
+                <p class="P-sc-1hlde52-0 footer-bdBYcX" style="padding-top: 1em; font-size: 14px; color: rgb(83, 87, 104); margin: 0px;">All Rights Reserved © 2022 Jumpstart Filings, Inc.</p>
+        </div>
+
+        <div class="col-md-3 col-12 pricing-footer-col-2">
+            <img src="https://app.jumpstartfilings.co/ycombinator_logo2.png" height="52px" class="">
+            <img src="https://app.jumpstartfilings.co/trustbadge_new.png" height="85px" class="">
+        </div>
+ </div>
+
+<script>
+const list = document.getElementById('card-features');
+const moreButton = document.getElementById('hidding-feature');
+moreButton.addEventListener('click', function () {
+  list.classList.toggle('full');
+  moreButton.textContent = (moreButton.textContent === 'VIEW ALL FEATURES') ? 'HIDE MORE FEATURES' : 'VIEW ALL FEATURES';
+});
+</script>
+
+</body>
+</html>

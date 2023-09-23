@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  width: 33%;
+  margin: auto;
+  padding-top: 3%;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .login-page {
+  width: 40%;
+}
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .login-page {
+  width: 50%;
+}
+}
+
+@media only screen and (max-width: 800px) {
+    .login-page {
+  width: 65%;
+}
+}
+
+@media only screen and (max-width: 600px) {
+    .login-page {
+  width: 90%;
+}
+}
+.form-box {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 100%;
+  margin: 0 auto 100px;
+  padding: 60px;
+  /* text-align: center; */
+  box-shadow: 0px 1px 50px rgba(50, 50, 93, 0.07);
+}
+.form-box input {
+  font-family: Avenir;
+  outline: 0;
+  background: #fff;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  border: 0.5px solid #e8ebef;
+    border-radius: 5px;
+}
+
+.forget-pass-text{
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: #8C14FC;
+    cursor: pointer;
+    padding-top: 20px;
+}
+.form-box button {
+   font-family: Avenir;
+  outline: 0;
+  background: #8C14FC;
+    border: 1px solid #8C14FC;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 16px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  margin-top: 7%;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+.form-box button:hover,.form button:active,.form button:focus {
+  background: #8C14FC;
+}
+/* .container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
+} */
+body {
+  background-image:url('https://dy6lzrazn1g8y.cloudfront.net/Repeated+Pattern.png');
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+}
+
+.login-header{
+text-align: center;
+}
+
+.login-header-text{
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #0F2137;
+    padding: 0px 0px 30px 0px;
+}
+
+.login-logo{
+    width: 40%;
+    margin-bottom: 5%;
+}
+
+a{
+    color: #8C14FC;
+    text-decoration: none;
+}
+.new-signup-text{
+    text-align: center;
+    font-size: 16px;
+    padding-top: 15px;
+    font-family: Avenir;
+}
+
+.label-login{
+    font-family: Avenir;
+}
+    </style>
+</head>
+
+
+    <body>
+        <div class="login-page">
+            <div class="form-box">
+                <div class="login-header">
+                    <img src="https://dy6lzrazn1g8y.cloudfront.net/jumpstart_logo.png" class="login-logo">
+                    <h2 class="login-header-text">Launch your dream company today.</h2>
+                 </div>
+              <form class="login-form">
+                
+                <label class="label-login">Email Address</label>
+                <input type="text" placeholder="Enter your email " required />
+                <label class="label-login">Password</label>
+                <input type="password" placeholder="Enter your password" required/>
+                <button>log in</button>
+                <p class="forget-pass-text"><a href="#">I forgot my password</a></p>
+
+                <p class="new-signup-text">Don't have an account?<a href="#"> Sign up</a></p>
+
+              </form>
+            </div>
+          </div>
+          
+          <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>

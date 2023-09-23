@@ -1,0 +1,2033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://js.stripe.com/v3/"></script>
+         <!-- Include Braintree SDK -->
+         <script src="https://js.braintreegateway.com/web/dropin/1.30.0/js/dropin.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css">
+
+    <style>
+
+.mob-progress-strip{
+display: none;
+}
+
+@media only screen and (max-width: 560px) {
+   
+    .certificate-com-name {
+    top: 60px!important;
+    left: 7%!important;
+    font-size: 25px!important;
+}
+
+  }
+
+  @media only screen and (max-width: 560px) {
+   
+    .certificate-officer-name  {
+   top: 130px!important;
+   left: 10%!important;
+}
+
+ }  
+
+ 
+ @media only screen and (max-width: 550px) {
+   
+
+ .certificate-com-type {
+    left: 60px!important;
+ }
+
+}
+
+
+@media only screen and (max-width: 540px) {
+   
+   .certificate-com-state {
+      left: 300px!important;
+  }
+  }
+
+  @media only screen and (max-width: 480px) {
+   
+   .certificate-com-state {
+      left: 260px!important;
+  }
+  }
+
+  @media only screen and (max-width: 460px) {
+   
+    .certificate-com-name {
+    top: 60px!important;
+    left: 0%!important;
+    font-size: 20px!important;
+}
+
+.certificate-officer-name {
+   font-size: 12px!important;
+   line-height: 18px!important;
+   top: 100px!important;
+   left: 0px!important;
+   text-align: center!important;
+}
+
+}
+
+@media only screen and (max-width: 420px){
+.certificate-com-type {
+    left: 30px!important;
+    top: 170px!important;
+}
+.certificate-com-state {
+    left: 220px!important;
+}
+
+.certificate-com-name {
+    top: 60px!important;
+    left: -8%!important;
+    font-size: 16px!important;
+}
+
+}
+
+@media only screen and (max-width: 400px){
+.certificate-com-type {
+    left: 25px!important;
+    top: 155px!important;
+}
+}
+@media only screen and (max-width: 900px) {
+   
+    .col-3-fixed {
+        display: none;
+    }
+    .col-9-information {
+        width: 97%!important;
+   }
+
+   .mob-progress-strip{
+    display: block;
+    }
+
+   .mob-icon-flex{
+    display: flex!important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1em;
+   }
+
+   .mob-icon-flex div {
+    margin-left: 0.5em;
+   }
+
+   .ixSWrN {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    color: rgb(51, 51, 51);
+    margin-bottom: 0.5em;
+}
+
+.flquow {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+   .start-vcfiling-mob-nav{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex!important;
+    flex-direction: row;
+    margin-bottom: 1em;
+    align-items: center;
+    justify-content: center;
+}
+
+.start-vcfiling-mob-nav img{
+    padding: 1em;
+    margin-right: 1em;
+    max-height: 60px;
+    cursor: pointer;
+}
+}
+
+@media only screen and (max-width: 450px) {
+   
+    .profile-button-next {
+
+    width: 100%!important;
+  }
+
+  .com-detail-head {
+        font-size: 25px!important;
+    }
+
+    .email-label-text, .name-label-text {
+    font-size: 15px!important;
+}
+.email-noty-text {
+    font-size: 12px!important;
+}
+}
+
+
+
+.company-detail-section{
+    background-color: rgb(244, 245, 247);
+}
+
+.head-active{
+    color: rgb(15, 33, 55)!important;
+}
+.review-confirm-section{
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2.5em;
+    margin-top: 1em;
+    padding: 1.5em;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(50, 50, 93, 0.07) 0px 1px 50px;
+    border: 1px solid rgb(241, 244, 246);
+    max-width: 100%;
+    padding-bottom: 5rem;
+}
+
+.previous-xD{
+    background: transparent;
+    border: none;
+    color: rgb(15, 33, 55);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 16px;
+}
+.review-card{
+    margin-left: 1em;
+    margin-right: 2.5em;
+    margin-bottom: 1em;
+    background: rgb(251, 247, 255);
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    border: 1px solid rgb(232, 213, 251);
+    border-radius: 5px;
+    margin-top: 0.5em;
+}
+
+.r-c-col{
+padding-left: 0%!important;
+}
+
+.r-c-sec-head{
+    display: flex;
+    margin-bottom: 0.5em;
+    font-size: 18px;
+    line-height: 22px;
+    color: rgb(51, 51, 51);
+    font-weight: normal;
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+
+.r-c-sec-head-bline{
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid rgb(242, 242, 242);
+    width: 100%;
+}
+
+.r-col-head{
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgb(15, 33, 55); 
+}
+
+.ai,.ci,.oi{
+    font-size: 16px;
+    color: rgb(51, 51, 51);
+    font-weight: normal;
+    letter-spacing: -0.3px;
+    line-height: 26px;
+    text-overflow: ellipsis;
+    white-space-collapse: initial;
+    text-wrap: wrap;
+    -webkit-font-smoothing: antialiased !important;
+    text-rendering: optimizelegibility !important;
+    overflow: hidden;
+    padding-top: 15px;
+    margin-bottom: 0;
+}
+
+/* #step-1{
+display: none!important;
+}
+
+#step-2{
+display: none!important;
+}
+
+#step-3{
+display: none!important;
+}
+
+#step-4{
+display: block!important;
+} */
+
+.office-sec-head{
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: rgb(17, 17, 17);
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+.officer-group-form{
+    display: inline-flex!important;
+    border-collapse: separate;
+    width: 100%;
+}
+
+.officer-form-input{
+    padding: 0.75em;
+    font-family: Avenir, sans-serif;
+    border: 1px solid rgb(223, 228, 234);
+    border-radius: 5px;
+    appearance: none;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.add-officer{
+    color: rgb(140, 20, 252);
+    border: 1px solid rgb(140, 20, 252);
+    border-radius: 5px;
+    background-color: transparent;
+    font-family: Avenir;
+    padding: 0.5em 1em 0.5em 0.75em;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.remove-officer{
+    color: rgb(189, 189, 189);
+    background: none;
+    font-size: 25px;
+}
+.add-officer:hover{
+    color: rgb(140, 20, 252);
+}
+
+.add-officer:focus{
+outline: none!important;
+color:rgb(140, 20, 252);;
+}
+
+.btn:focus{
+outline: none!important;
+}
+
+.i-circle-icon{
+color: #000;
+font-size: 12px;
+margin-left: 5px;
+margin-right: 5px;
+}
+.profile-button-next{
+    background-color: rgb(140, 20, 252);
+    color: white;
+    border: 1px solid rgb(140, 20, 252);
+    padding: 16px 32px;
+    border-radius: 5px;
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+    width: 25%;
+}
+
+.profile-button-next:hover{
+    background-color: rgb(140, 20, 252);
+}
+
+
+
+label {
+    display: block;
+}
+
+.intl-tel-input,
+.iti{
+  width: 100%;
+}
+
+.iti--separate-dial-code .iti__selected-flag {
+    background-color: transparent!important;
+}
+.iti input{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.com-detail-head{
+    font-size: 28px;
+    line-height: 41px;
+    font-weight: 700;
+    color: rgb(17, 17, 17);
+    letter-spacing: -0.5px;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.setup-content{
+    margin: auto;
+    width: 100%;
+}
+
+.col-3-fixed{
+    min-width: 30%;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.login-logo{
+    width: 40%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+.col-9-information{
+    width: 75%;
+
+}
+
+body{
+    overflow-x:hidden;
+}
+   
+.ckLBrX{
+    width: 100px;
+    height: 100px;
+}
+
+.circle-col{
+    text-align: -webkit-center;
+}
+
+.half-circle{
+    padding-left: 0px;
+}
+
+.half-circle-img-1{
+    position: absolute;
+    margin-top: 150px;
+}
+
+.half-circle-img-2{
+    position: absolute;
+    margin-top: 70px;
+}
+
+.headings-dt{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 3em;
+    transition: color 500ms ease-in 0s;
+    margin-left: 12%;
+}
+
+/* .headings-dt div:nth-child(1) {
+    color: rgb(15, 33, 55);
+} */
+
+.headings-dt-all{
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+    color: rgb(189, 189, 189);
+    text-transform: uppercase;
+    margin-bottom: 1.5em;
+}
+
+.corp-plan-img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.corp-plan-box{
+    flex-direction: column;
+    align-items: flex-start;
+    width: 184px;
+}
+
+.corp-plan-head{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 28px;
+    color: rgb(51, 51, 51);
+    margin-bottom: 0.5em;
+}
+
+.sidebar-bottom-img{
+    width: 25vw;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+
+.faq-box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 250px;
+}
+
+.faq-hd{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 10px;
+    letter-spacing: 0.1em;
+    color: rgb(51, 51, 51);
+}
+
+
+/* faq styling */
+
+.faqblock {
+    display: block;
+}
+.faqblock label {
+  display:block;
+  position:relative;
+	height: 25px;
+  cursor: pointer;	
+	color: #333;
+	font-size: 12px;
+	font-weight: bold;
+      border:0;
+      text-align: left;
+    margin: 0!important;
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 19px;
+    color: rgb(140, 20, 252);
+    margin: 0px 0px 0.75em;
+
+}
+.faqblock input {
+	display: none;
+}
+.faqblock-content {
+    position: absolute;
+    visibility: hidden;
+      border:0;
+
+
+}
+.faqblock:focus {
+    pointer-events: none;
+}
+.faqblock:focus .faqblock-content {
+    visibility: visible;
+    pointer-events: none;
+    position:relative;
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 19px;
+    color: rgb(51, 51, 51);
+    margin: 0px 0px 1em;
+    text-align: left;
+
+}
+
+
+
+x.faqblock .faqblock-content {
+	height: 0px;
+  margin: 2px;
+	overflow: hidden;
+	-webkit-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+	-moz-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+	-o-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+	-ms-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+	transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+}
+x.faqblock input:checked ~ .faqblock-content {
+	-webkit-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+	-moz-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+	-o-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+	-ms-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+	transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+}
+x.faqblock input:checked ~ .faqblock-content {
+	height: 160px;
+}
+
+
+/* end faq styling */
+
+
+/* form detail styling */
+
+.stepwizard-step p {
+    margin-top: 10px;
+}
+
+.stepwizard-row {
+    display: table-row;
+}
+
+.stepwizard {
+    /* display: inline-table; */
+    display: none;
+    width: 100%;
+    position: relative;
+}
+
+.stepwizard-step button[disabled] {
+    opacity: 1 !important;
+    filter: alpha(opacity=100) !important;
+}
+
+.stepwizard-row:before {
+    top: 14px;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    z-order: 0;
+
+}
+
+.stepwizard-step {
+    display: table-cell;
+    text-align: center;
+    position: relative;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+
+
+.email-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+    flex-wrap: wrap;
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.email-label-parent label{
+display: block!important;
+}
+
+.email-label-text,.name-label-text{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgb(51, 51, 51);
+    margin: 0px;
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.email-noty-text{
+    margin: 0px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 16px;
+    font-size: 14px;
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+}
+
+.email-form-input,.name-form-input{
+    padding: 0.75em;
+    font-family: Avenir, sans-serif;
+    border: 1px solid rgb(223, 228, 234);
+    border-radius: 5px;
+    width: 100%;
+    appearance: none;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-bottom: 2rem;
+}
+/* end form detail styling */
+
+.dropdown {
+      position: relative;
+      /* display: inline-block; */
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+    margin-top: 10px;
+      min-width: 100%;
+      border: 1px solid #ddd;
+      z-index: 1;
+  
+    }
+
+    .dropdown-content option {
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      color: rgb(51, 51, 51);
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .payment-head-para{
+    text-align: center;
+    font-size: 17px;
+    color: rgb(51, 51, 51);
+    font-weight: normal;
+    letter-spacing: -0.3px;
+    line-height: 26px;
+    text-overflow: ellipsis;
+    white-space-collapse: initial;
+    text-wrap: wrap;
+    -webkit-font-smoothing: antialiased !important;
+    text-rendering: optimizelegibility !important;
+    overflow: hidden;
+    }
+
+    .payment-certificate {
+    position: relative;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.certificate-com-name {
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    line-height: 41px;
+    text-align: center;
+    color: rgb(17, 17, 17);
+    position: absolute;
+    top: 84px;
+    left: 13%;
+    width: 400px;
+    font-size: 30px;
+}
+
+.certificate-officer-name {
+    position: absolute;
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: rgb(17, 17, 17);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 356px;
+    top: 163px;
+    left: 15%;
+}
+
+.certificate-officer-name .heading {
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgb(189, 189, 189);
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+
+.certificate-com-type {
+    position: absolute;
+    bottom: 203px;
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: rgb(17, 17, 17);
+    left: 78px;
+    bottom: 60px;
+    font-size: 16px;
+}
+
+.certificate-com-type .heading {
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgb(189, 189, 189);
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+
+.certificate-com-state {
+    position: absolute;
+    bottom: 203px;
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: rgb(17, 17, 17);
+    left: 350px;
+    bottom: 60px;
+}
+
+.order-summary-section{
+    display: flex;
+    flex-direction: column;
+    padding: 3em;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(241, 244, 246);
+    box-shadow: rgba(50, 50, 93, 0.07) 0px 1px 50px;
+    border-radius: 2px;
+}
+
+.payment-certificate-img{
+width: 100%;
+}
+
+.order-summary-head{
+    font-size: 30px;
+    line-height: 41px;
+    font-weight: 700;
+    color: rgb(17, 17, 17);
+    letter-spacing: -0.5px;
+    text-align: center;
+    margin-bottom: 1em;
+
+}
+
+.order-items{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.25em;
+    
+}
+.order-items-sub{
+    font-size: 16px;
+    color: rgb(51, 51, 51);
+    font-weight: normal;
+    letter-spacing: -0.3px;
+    line-height: 40px;
+    text-overflow: ellipsis;
+    white-space-collapse: initial;
+    text-wrap: wrap;
+    -webkit-font-smoothing: antialiased !important;
+    text-rendering: optimizelegibility !important;
+    overflow: hidden;
+}
+
+.total-bottom-line{
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid rgb(242, 242, 242);
+    width: 100%;
+}
+
+.order-items-total{
+    font-size: 16px;
+    color: rgb(51, 51, 51);
+    font-weight: normal;
+    letter-spacing: -0.3px;
+    line-height: 40px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space-collapse: initial;
+    text-wrap: wrap;
+    -webkit-font-smoothing: antialiased !important;
+    text-rendering: optimizelegibility !important;
+    overflow: hidden;
+}
+
+.after-summary-info-card{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(232, 213, 251);
+    border-radius: 5px;
+    margin-top: 0.5em;
+}
+ 
+.payment-details-head{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-bottom: 2px;
+    margin-top: 25px;
+}
+
+.payments-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.payments-button div:nth-child(2) {
+    border: 1px solid rgb(140, 20, 252);
+}
+.payment-credit-card-button{
+    padding: 1em 2em;
+    border: 1px solid rgb(189, 189, 189);
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+#finish-order-btn{
+    display: none;
+    background-color: rgba(0, 0, 0, 0.05);
+    color: rgba(0, 0, 0, 0.3);
+    border: 1px solid transparent;
+    padding: 16px 32px;
+    border-radius: 5px;
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* stripe css code  */
+
+#stripe-form{
+    display:none;
+}
+.StripeElement {
+  background-color: white;
+/*   height: 40px; */
+  padding: 10px 12px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+  border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+
+/* end stripe css code */
+
+
+#paypal-payment-container{
+    display: none;
+    background-color: white;
+    border: 1px solid #B5B5B5;
+    margin-bottom: 20px!important;
+    border-radius: 4px;
+    margin: 0 auto;
+    max-height: 600px;
+    max-height: fit-content;
+    transition: transform 300ms, opacity 300ms, max-height 300ms ease;
+    width: 100%;
+}
+
+.paypal-container-header img{
+    width: 15%;
+    margin-left: 5%;
+}
+
+.paypal-container-section{
+    min-height: 84px;
+    padding: 20px;
+    text-align: center;
+    
+}
+.paypal-container-bt-line{
+    border-bottom: 1px solid #B5B5B5;
+}
+.payment_method_img{
+    width: 100%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+
+.start-vcfiling-mob-nav{
+    display: none;
+}
+
+.mob-icon-flex{
+display: none;
+}
+
+.mob-progress-strip{
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: rgb(244, 245, 247);
+    font-size: 14px;
+    width: 65%;
+    margin: auto;
+}
+
+.RSPBprogressBar {
+    height: 10px;
+    line-height: 1;
+    border-radius: 10px;
+    position: relative;
+    background-color: hsla(0,0%,83%,.6);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 0;
+}
+
+.RSPBprogressBar .RSPBstep {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    position: absolute;
+    transform: translateX(-50%);
+    transition-property: all;
+    transition-timing-function: ease;
+}
+
+.RSPBprogressBar .RSPBprogression {
+    position: absolute;
+    transition: width .3s ease;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background: rgba(0,116,217,.8);
+    z-index: -1;
+}
+
+.aroew {
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgb(51, 51, 51);
+}
+
+</style>
+</head>
+
+
+    <body class="company-detail-section">
+
+        <div class="start-vcfiling-mob-nav"><a href="#">
+            <img src="https://app.jumpstartfilings.co/logo@3x.png" alt="logo" class="styles__LogoImg-sc-kfcdse-5 hXdSGm"></a>
+        </div>
+
+        <div id="mobile-form-info" class=" mob-icon-flex styles__FormInfo-sc-kfcdse-15 hXDppV">
+            <div id="mobile-form-row" class="styles__FormInfoRow-sc-kfcdse-16 ixSWrN">
+                <img src="https://app.jumpstartfilings.co/entity_type.png" class="styles__FormInfoImg-sc-kfcdse-17 flquow">LLC</div>
+                <div id="mobile-form-row" class="styles__FormInfoRow-sc-kfcdse-16 ixSWrN">
+                <img src="https://app.jumpstartfilings.co/state.png" class="styles__FormInfoImg-sc-kfcdse-17 flquow">Wyoming</div>
+                <div id="mobile-form-row" class="styles__FormInfoRow-sc-kfcdse-16 ixSWrN">
+                <img src="https://app.jumpstartfilings.co/plan.png" class="styles__FormInfoImg-sc-kfcdse-17 flquow">Vcfilling Plan</div>
+        </div>
+
+
+
+<div class="mob-progress-strip">
+    <div class="RSPBprogressBar">
+        <div class="RSPBstep" style="left: 0%; transition-duration: 300ms; transform: translateX(-50%) scale(1);">
+        <div class="FormProgress__StepElementContainer-sc-gtbcdr-2 iIYlLl">
+            <div class="aroew" style="position: absolute; bottom: -20px; left: -28px;">Personal</div>
+            <svg width="20px" height="20px" viewBox="0 0 14 13" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><g id="Dashboard-Copy-3" transform="translate(-713.000000, -510.000000)"><g id="cloud-check.1" transform="translate(714.000000, 510.000000)"><circle id="Oval" stroke="#8C14FC" fill="#8C14FC" cx="6" cy="6.501" r="6"></circle><path d="M8.674,4.757 L5.774,8.631 C5.64349596,8.80477767 5.44402983,8.91340295 5.22724781,8.92875035 C5.0104658,8.94409775 4.79768534,8.86465807 4.644,8.711 L3.144,7.211" id="Path" stroke="#FFFFFF"></path></g></g></g></svg>
+        </div>
+        </div>
+        
+        <div class="RSPBstep" style="left: 33.3333%; transition-duration: 300ms; transform: translateX(-50%) scale(1);">
+        <div class="FormProgress__StepElementContainer-sc-gtbcdr-2 iIYlLl">
+            <div class="aroew" style="position: absolute; bottom: -20px; left: -20px;">Company</div>
+            <svg width="20px" height="20px" viewBox="0 0 14 13" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><g id="Dashboard-Copy-3" transform="translate(-713.000000, -510.000000)"><g id="cloud-check.1" transform="translate(714.000000, 510.000000)"><circle id="Oval" stroke="#D3D3D3" fill="#D3D3D3" cx="6" cy="6.501" r="6"></circle><path d="M8.674,4.757 L5.774,8.631 C5.64349596,8.80477767 5.44402983,8.91340295 5.22724781,8.92875035 C5.0104658,8.94409775 4.79768534,8.86465807 4.644,8.711 L3.144,7.211" id="Path" stroke="#FFFFFF"></path></g></g></g></svg>
+        </div>
+        </div>
+
+       <div class="RSPBstep" style="left: 66.6667%; transition-duration: 300ms; transform: translateX(-50%) scale(1);">
+        <div class="FormProgress__StepElementContainer-sc-gtbcdr-2 iIYlLl">
+            <div class="aroew" style="position: absolute; bottom: -20px; left: -10px;">Review</div>
+            <svg width="20px" height="20px" viewBox="0 0 14 13" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><g id="Dashboard-Copy-3" transform="translate(-713.000000, -510.000000)"><g id="cloud-check.1" transform="translate(714.000000, 510.000000)"><circle id="Oval" stroke="#D3D3D3" fill="#D3D3D3" cx="6" cy="6.501" r="6"></circle><path d="M8.674,4.757 L5.774,8.631 C5.64349596,8.80477767 5.44402983,8.91340295 5.22724781,8.92875035 C5.0104658,8.94409775 4.79768534,8.86465807 4.644,8.711 L3.144,7.211" id="Path" stroke="#FFFFFF"></path></g></g></g></svg>
+        </div>
+        </div>
+        
+        <div class="RSPBstep" style="left: 100%; transition-duration: 300ms; transform: translateX(-50%) scale(1);">
+            <div class="FormProgress__StepElementContainer-sc-gtbcdr-2 iIYlLl">
+                <div class="aroew" style="position: absolute; bottom: -20px; left: -20px;">Payment</div>
+                <svg width="20px" height="20px" viewBox="0 0 14 13" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><g id="Dashboard-Copy-3" transform="translate(-713.000000, -510.000000)"><g id="cloud-check.1" transform="translate(714.000000, 510.000000)"><circle id="Oval" stroke="#D3D3D3" fill="#D3D3D3" cx="6" cy="6.501" r="6"></circle><path d="M8.674,4.757 L5.774,8.631 C5.64349596,8.80477767 5.44402983,8.91340295 5.22724781,8.92875035 C5.0104658,8.94409775 4.79768534,8.86465807 4.644,8.711 L3.144,7.211" id="Path" stroke="#FFFFFF"></path></g></g></g></svg>
+            </div>
+        </div>
+
+        <div class="RSPBprogression" id="xprogressBar" style="background: linear-gradient(to right, rgb(216, 173, 254), rgb(124, 3, 236));width: 25%;">
+        </div>
+    </div>
+</div>
+
+
+
+
+      <div class="row">
+            <div class="col-md-3 col-3-fixed" >
+                <img src="https://dy6lzrazn1g8y.cloudfront.net/jumpstart_logo.png" class="login-logo">
+
+                <div class="row">
+                    <div class="col-md-2 half-circle" >
+                        <img src="https://app.jumpstartfilings.co/sidebar_element.png" class="half-circle-img-1"/>  
+                              <img src="https://app.jumpstartfilings.co/sidebar_circle_element.png" class="half-circle-img-2" />  
+                    </div>
+
+                    <div class="col-md-8 circle-col">
+                        <!-- step circle -->
+                        <div class="styles__CircularProgressContainer-sc-kfcdse-6 ckLBrX">
+                            <div data-test-id="CircularProgressbarWithChildren">
+                              <div style="position: relative; width: 100%; height: 100%;">
+                                <svg class="CircularProgressbar " viewBox="0 0 100 100" data-test-id="CircularProgressbar"><path class="CircularProgressbar-trail" d="
+                                        M 50,50
+                                        m 0,-46
+                                        a 46,46 0 1 1 0,92
+                                        a 46,46 0 1 1 0,-92
+                                    " stroke-width="8" fill-opacity="0" style="stroke: rgb(242, 242, 242); stroke-linecap: butt; stroke-dasharray: 289.027px, 289.027px; stroke-dashoffset: 0px;"></path><path class="CircularProgressbar-path" d="
+                                        M 50,50
+                                        m 0,-46
+                                        a 46,46 0 1 1 0,92
+                                        a 46,46 0 1 1 0,-92
+                                    " stroke-width="8" fill-opacity="0" style="stroke: rgb(140, 20, 252); stroke-linecap: butt; transition-duration: 0.5s; stroke-dasharray: 289.027px, 289.027px; stroke-dashoffset: 216.77px;"></path></svg>
+                        
+                                        <div data-test-id="CircularProgressbarWithChildren__children" style="position: absolute; width: 100%; height: 100%; margin-top: -100%; display: flex; flex-direction: column; justify-content: center; align-items: center;"><div style="font-size: 24px; margin-top: -5px;"><strong id="step-number"></strong> /4</div>
+                                        </div>
+                            </div>
+                        </div>
+                     </div>
+
+                     <!-- end step circle -->
+
+                     <!-- information column -->
+                     <div value="1" class="FormSteps__FormStepContainer-sc-6zysvb-0 headings-dt">
+                        <div class="headings-dt-all" id="xstep-1">Personal Info</div>
+                        <div class="headings-dt-all" id="xstep-2">Company Info</div>
+                        <div class="headings-dt-all" id="xstep-3">Review &amp; Confirm</div>
+                        <div class="FormSteps__FormStep-sc-6zysvb-1 headings-dt-all" id="xstep-4">Payment</div>
+                    </div>
+                     <!-- end information column -->
+
+
+                     <!-- corporation plans text -->
+
+                     <div class=" corp-plan-box">
+                        <div class=" corp-plan-head">
+                            <img src="https://app.jumpstartfilings.co/entity_type.png" class="styles__FormInfoImg-sc-kfcdse-17 corp-plan-img">
+                            <span id="companyTypeValue">Corporation</span>
+                        </div>
+                        <div class=" corp-plan-head">
+                            <img src="https://app.jumpstartfilings.co/state.png" class="styles__FormInfoImg-sc-kfcdse-17 corp-plan-img">
+                            <span id="stateValue">Wyoming</span>
+                        </div>
+                        <div class=" corp-plan-head">
+                        <img src="https://app.jumpstartfilings.co/plan.png" class="styles__FormInfoImg-sc-kfcdse-17 corp-plan-img">
+                        <span id="planValue">Vcfilling Plan</span>
+                       </div>
+                    </div>
+
+                     <!-- end corporation plans text -->
+                    <img src="https://app.jumpstartfilings.co/sidebar_bottom.png" class="sidebar-bottom-img"/>
+
+                              <!-- FAQ -->
+
+                   <div class="faq-box">
+                    <h3 class="faq-hd">FAQs</h3>
+                 
+
+                    <div tabindex="0" class="faqblock">
+                        <input type="checkbox" id="faq" />
+                        <label for="faq">Whats your refund policy?</label>
+                        <div class="faqblock-content">
+                        <p>Buy with confidence knowing that your purchase is 100% refundable minus any expenses we have incurred to begin your formation. Once our payment is sent to the state, however, we cannot accept any cancellations or changes to your filing.</p>
+                        </div>
+                    </div>
+                    <div tabindex="0" class="faqblock">
+                        <input type="checkbox" id="faq" />
+                        <label for="faq">What if I make a mistake</label>
+                        <div class="faqblock-content">
+                        <p>If you make a mistake, please contact us as soon as possible so we can get it fixed before your formation is completed with the state.</p>
+                        </div>
+                    </div>
+
+                    <div tabindex="0" class="faqblock">
+                        <input type="checkbox" id="faq" />
+                        <label for="faq">What happens after I place my order?</label>
+                        <div class="faqblock-content">
+                        <p>Once you place your order, we will create your account and you will be prompted to sign in. Once you sign in you'll be asked to upload your documents to your account and answer a few more questions related to your company so our filing team can get started filing your company.</p>
+                        </div>
+                    </div>
+
+                    <div tabindex="0" class="faqblock">
+                        <input type="checkbox" id="faq" />
+                        <label for="faq">What kind of support do you provide?</label>
+                        <div class="faqblock-content">
+                        <p>We are available by chat during regular business hours on Monday-Friday from 8am-7pm central time. You can also chat with us or send us an email at help@vcfilling.com</p>
+                        </div>
+                    </div>
+
+                
+
+                   </div>
+
+                   <!-- end FAQ -->
+
+                   </div>
+
+        
+                   <div class="col-md-2" >
+                                
+                   </div>
+             </div>       
+    </div>
+
+          <!-- Personal Information -->
+            <div class="col-md-9 col-9-information pull-right">
+               
+                <div class="container">
+                    <div class="stepwizard">
+                        <div class="stepwizard-row setup-panel">
+                            <div class="stepwizard-step">
+                                <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
+                                <p>Personal</p>
+                            </div>
+                            <div class="stepwizard-step">
+                                <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                                <p>Company</p>
+                            </div>
+                            <div class="stepwizard-step">
+                                <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                                <p>Review</p>
+                            </div>
+                             <div class="stepwizard-step">
+                                <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
+                                <p>Payment</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form role="form">
+                        <div class="row setup-content" id="step-1">
+                            <div class="col-md-3"></div>
+                                <div class="col-md-6 col-sm-12">
+                                    <h2 class="com-detail-head">Personal Information</h2>
+                                    <div class="form-group email-label-parent">
+                                      
+                                        <label class="control-label">
+                                            <div class="email-label">
+                                                <p class="email-label-text">Email address</p>
+                                                <p class="email-noty-text">We will send all notifications and updates to this email</p>
+                                        </div>
+                                    </label>
+                                        <input  maxlength="100" type="text" required="required" class="email-form-input"  placeholder="Enter your best email to recieve notifications"  />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">
+                                            <p class="name-label-text">Your full name</p>
+                                        </label>
+                                        <input maxlength="100" type="text" required="required" class="name-form-input" placeholder="Enter your name as it appears on your passport" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">
+                                            <p class="name-label-text">Gender</p>
+                                        </label>
+
+                                        <div class="dropdown">
+                                            <!-- <input type="text" id="countryInput" placeholder="Select a Country"> -->
+                                            <div class="dropdown">
+                                                <input type="text" id="genderInput" class="name-form-input"  placeholder="Choose Gender">
+                                                <div class="dropdown-content" id="genderDropdown"></div>
+                                              </div>
+                                          </div>
+
+                                        <!-- <select id="genderSelect"></select> -->
+                                        <!-- <input maxlength="100" type="text" required="required" class="name-form-input" placeholder="Enter your name as it appears on your passport" /> -->
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">
+                                            <p class="name-label-text">Date of birth</p>
+                                        </label>
+                                        <input type="date" class="name-form-input" placeholder="" name="name">                                    
+                                      </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">
+                                            <p class="name-label-text">Phone Number</p>
+                                        </label>
+                                        <input type="tel" id="mobile_code" class="form-control name-form-input" placeholder="" name="name">                                    
+                                      </div>
+
+                                      <div class="form-group">
+                                        <label class="control-label">
+                                            <p class="name-label-text">Mailing Address</p>
+                                        </label>
+                                        <input type="text" class="name-form-input" placeholder="Start typing address..." name="name">                                    
+                                      </div>
+
+                                      <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label">
+                                                    <p class="name-label-text">City</p>
+                                                </label>
+                                                <input type="text" class="name-form-input" placeholder="" name="name">                                    
+                                              </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label">
+                                                    <p class="name-label-text">Region / State</p>
+                                                </label>
+                                                <input type="text" class="name-form-input" placeholder="" name="name">                                    
+                                              </div>
+                                        </div>
+
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label">
+                                                    <p class="name-label-text">Country</p>
+                                                </label>
+                                                <input type="text" class="name-form-input" placeholder="Start Typing Country..." name="name">                                    
+                                              </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label">
+                                                    <p class="name-label-text">Postal Code</p>
+                                                </label>
+                                                <input type="text" class="name-form-input" placeholder="" name="name">                                    
+                                              </div>
+                                        </div>
+
+
+                                      </div>
+
+                                    <button class="btn btn-primary nextBtn profile-button-next btn-lg pull-right" type="button" >Next</button>
+                                </div>
+                           <div class="col-md-3"></div>
+                        </div>
+                        <div class="row setup-content" id="step-2">
+                            <div class="col-md-3"></div>
+                                <div class="col-md-6 col-sm-12">
+                                    <h2 class="com-detail-head">Company Information</h2>
+                                 
+
+                                    <div class="form-group">
+                                        <label class="control-label">
+                                            <p class="name-label-text">Choose a company name</p>
+                                        </label>
+                                        <input maxlength="100" type="text" required="required" class="name-form-input"  />
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label class="control-label">
+                                            <p class="name-label-text">Choose a designator <a aria-describedby="popup-5" class="i-circle-icon">ⓘ</a></p>
+                                        </label>
+
+                                          <div class="dropdown">
+                                                <input type="text" id="designatorInput" class="name-form-input"  placeholder="Inc.">
+                                                <div class="dropdown-content" id="designatorDropdown"></div>
+                                              </div>
+                                        </div>
+                                    
+                                        <h3 class="office-sec-head">Company Officers</h3>
+                                        <div class="form-group">
+                                            <label class="control-label">
+                                                <p class="name-label-text">Officer full name</p>
+                                            </label>
+
+                                             <!-- add forms -->
+                                        <div id="rowx">
+                                            <div class="input-group m-3 officer-group-form">
+                                                <input type="text" class="officer-form-input">
+                                                <div class="input-group-prepend">
+                                                    <button class="btn remove-officer"
+                                                            id="DeleteRow"
+                                                            type="button">
+                                                        x
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                     
+                                        <div id="newinput"></div>
+                                        <button id="rowAdder" type="button" class="btn btn-dark add-officer">
+                                            <span class="bi bi-plus-square-dotted">
+                                            </span> + Officer
+                                        </button>
+                                       
+                                       <!-- end forms -->  
+                                        </div>    
+                                        
+                                        <h3 class="office-sec-head">Shares & Ownership</h3>
+                                        <div class="form-group">
+                                            <label class="control-label">
+                                                <p class="name-label-text">Authorized Shares Outstanding</p>
+                                            </label>
+                                            <input maxlength="100" type="text" required="required" class="name-form-input" placeholder="10,000,000"  />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="control-label">
+                                                <p class="name-label-text">Per Value</p>
+                                            </label>
+                                            <input maxlength="100" type="text" required="required" class="name-form-input" placeholder="$0.0001"  />
+                                        </div>
+
+                                        <h3 class="office-sec-head">Your Account</h3>
+                                        <div class="form-group">
+                                            <label class="control-label">
+                                                <p class="name-label-text">Create Password</p>
+                                            </label>
+                                            <input minlength="8" type="password" required="required" class="name-form-input" placeholder="8+ characters"  />
+                                        </div>
+                                       
+                                        <button class="prevBtn pull-left previous-xD" type="button" >Previous</button>
+                                    <button class="btn btn-primary nextBtn btn-lg pull-right profile-button-next" type="button" >Next</button>
+                                </div>
+                                <div class="col-md-3"></div>
+                        </div>
+                        <div class="row setup-content" id="step-3">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6 col-sm-12">
+                                <h2 class="com-detail-head">Review & Confirm</h2>
+                                  
+                                
+
+                                 <div class="row review-confirm-section">
+                                    <div class="r-c-sec-head">Account Information</div>
+                                    <div class="r-c-sec-head-bline"></div>
+                                 <div class="col-md-6 col-12 r-c-col">
+                                    <div class="r-col-head">MAIN CONTACT</div>
+                                    <p  class="ai ac-name">usama perwaiz</p>
+                                    <p  class="ai ac-email">usamaperwaiz@gmail.com</p>
+                                    <p  class="ai ac-phone">+17167553758</p>
+                                 </div>
+                                 <div class="col-md-6 col-12 r-c-col">
+                                    <div class="r-col-head">MAILING ADDRESS</div>
+                                    <p  class="ai ac-adress">Miami Beach Boardwalk, Miami Beach, FL, USA</p>
+                                 </div>
+                                 </div>
+
+
+                                 <div class="row review-confirm-section">
+                                    <div class="r-c-sec-head">Company Information</div>
+                                    <div class="r-c-sec-head-bline"></div>
+                                 <div class="col-md-6 col-12 r-c-col">
+                                    <div class="r-col-head">COMPANY NAME</div>
+                                    <p  class="ci co-name">Vcfilling</p>
+                                    <br>
+                                    <div class="r-col-head">STATE</div>
+                                    <p  class="ci co-state">Florida</p>
+                                 </div>
+                                 <div class="col-md-6 col-12 r-c-col">
+                                    <div class="r-col-head">COMPANY TYPE</div>
+                                    <p  class="ci c-type">Corporation</p>
+                                 </div>
+                                 </div>
+
+                                 <div class="row review-confirm-section">
+                                    <div class="r-c-sec-head">Officer Information</div>
+                                    <div class="r-c-sec-head-bline"></div>
+                                 <div class="col-md-6 col-12 r-c-col">
+                                    <div class="r-col-head">PRESIDENT</div>
+                                    <p  class="oi officer-name">Zaid Ali</p>
+                                    <br>
+                                    <div class="r-col-head">VICE PRESIDENT</div>
+                                    <p  class="oi officer-vc">Taha</p>
+                                 </div>
+                                 <div class="col-md-6 col-12 r-c-col">
+                                    <div class="r-col-head">SECRETARY</div>
+                                    <p  class="oi officer-secretary">Waseem</p>
+                                 </div>
+                                 </div>
+
+
+                                 <div class="row review-confirm-section">
+                                    <div class="r-c-sec-head">Shares & Ownership</div>
+                                    <div class="r-c-sec-head-bline"></div>
+                                 <div class="col-md-6 col-12 r-c-col">
+                                    <div class="r-col-head">SHARES AUTHORIZED</div>
+                                    <p  class="oi officer-name">100000.0</p>
+                                 </div>
+                                 <div class="col-md-6 col-12 r-c-col">
+                                    <div class="r-col-head">PER VALUE</div>
+                                    <p  class="oi officer-secretary">00.0001</p>
+                                 </div>
+                                 </div>
+
+                                 <!-- bottom note -->
+                                 <div class="review-card">
+                                    <p style="margin: 0px;">
+                                    <b>Take a good look! </b> 
+                                    We send the above information to the state, so make sure everything is correct and that your name matches your passport.
+                                    </p>
+                                 </div>
+                                    <button class="prevBtn pull-left previous-xD" type="button" >Previous</button>
+                                    <button class="btn btn-primary nextBtn btn-lg pull-right profile-button-next" type="button" >Next</button>
+                                </div>
+                                <div class="col-md-3"></div>
+                        </div>
+                        <div class="row setup-content" id="step-4">
+                            <div class="col-md-3"></div>
+                                <div class="col-md-6 col-sm-12">
+                                    <h2 class="com-detail-head">Your application is ready!</h2>
+
+                                    <p class="payment-head-para">
+                                        You’re ready to begin the filing process! Once you place your order, you'll get access to your online account to upload your passport document securely and answer a few more questions before we start filing your company.
+                                    </p>
+
+                                    <!-- cerficate -->
+
+                                    <div class="payment-certificate">
+                                        <img src="https://app.jumpstartfilings.co/certificate.png"  class="payment-certificate-img">
+                                        <div class="certificate-com-name">OrbixCode CORPORATION</div>
+                                                <div class="certificate-officer-name">
+                                                  <p class="heading">Officers</p>Usama CEO
+                                                </div>
+                                                <div class="certificate-com-type">
+                                                    <p class="heading">Company Type</p>Corporation
+                                                </div>
+                                                <div class="certificate-com-type certificate-com-state">
+                                                    <p class="heading">State</p>Wyoming
+                                                </div>
+                                    </div>
+
+                                    <!-- end certificate -->
+
+                                    <!-- order summary  -->
+                                    <div class="order-summary-section">
+                                     <h2 class="order-summary-head">Order Summary</h2>
+
+                                     <div class="styles__OrderSummaryRow-sc-2a89pf-24 order-items">
+                                        <p class="order-items-sub" style="margin-right: 5px;">Vcfilling Plan</p>
+                                        <p class="order-items-sub">$399</p>
+                                    </div>
+
+                                     <div class="styles__OrderSummaryRow-sc-2a89pf-24 order-items">
+                                        <p class="order-items-sub" style="margin-right: 5px;">US Bank Account</p>
+                                        <p class="order-items-sub">$0</p>
+                                    </div>
+
+                                    <div class="styles__OrderSummaryRow-sc-2a89pf-24 order-items">
+                                        <p class="order-items-sub" style="margin-right: 5px;">One Time Wyoming State Fee <a aria-describedby="popup-5" class="i-circle-icon">ⓘ</a></p>
+                                        <p class="order-items-sub">$0</p>
+                                    </div>
+                                   
+                                    <div class="total-bottom-line"></div>
+
+                                    <div class="styles__OrderSummaryRow-sc-2a89pf-24 order-items">
+                                        <p class="order-items-total" style="margin-right: 5px;">Due Today</p>
+                                        <p class="order-items-total">$399</p>
+                                    </div>
+                                    </div>
+                                    <!-- end order summary -->
+
+                                    <div class="after-summary-info-card">
+                                        <p style="margin: 0px;"><b>Did you know: </b>
+                                            Business formation expenses are fully tax deductible and you can write off the entire amount spent and reduce your taxes?
+                                        </p>
+                                    </div>
+
+                                    <div class="payment-details-head">Payment Details</div>
+                                    <!-- payment-button -->
+                                    <div class="payments-button">
+                                        <div id="toggle-stripe" class="payment-credit-card-button" >Credit Card</div>
+                                        <div id="toggle-paypal" class="payment-credit-card-button"><img src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-100px.png" alt="PayPal Logo"></div>
+                                    </div>
+                                    <!-- end payment button -->
+                                    <br>
+
+                                    
+                                    <!-- Stripe Payment Form -->
+                                    <div class="form-row" id="stripe-form">
+                                        <div id="card-element">    
+                                          <!-- a Stripe Element will be inserted here. -->
+                                        </div>
+                                        <div id="card-errors" role="alert"></div>
+                                      </div>
+                                      <!-- End Stripe Payment Form -->
+
+                                    <!-- Paypal Payment Container -->
+                                    <div  id="paypal-payment-container">
+                                        <div class="paypal-container-header">
+                                            <img src="https://logos-world.net/wp-content/uploads/2020/08/PayPal-Logo.jpg">
+                                        </div>
+                                         <div class="paypal-container-bt-line"></div>
+                                        <div class="paypal-container-section">
+                                            <script src="https://www.paypalobjects.com/api/button.js?" data-merchant="braintree" data-id="paypal-button" data-button="checkout" data-color="gold" data-size="medium" data-shape="pill" data-button_type="submit" data-button_disabled="false"></script>
+                                        </div>
+                                    </div>
+                                 <!-- End Paypal Payment Container -->
+
+                                    <div class="after-summary-info-card" id="paypal-alert">
+                                        <p style="margin: 0px;"><b>Don't have a PayPal account?</b>
+                                             Please reach out to our support team at <b><a href="mailto:help@VCfiling.com">help@VCfiling.com</a></b> and they will assist you with the payments.
+                                    </p>
+                                   </div>
+                                    <button class="prevBtn pull-left previous-xD" type="button" >Previous</button>
+                                    <div class="pull-right" id="finish-order-btn" >Place Order</div>
+                                    <img src="https://app.jumpstartfilings.co/payment_badges_new.svg" class="payment_method_img">
+                                </div>
+                                <div class="col-md-3"></div>
+                        </div>
+                    </form>
+                    </div>
+                    <!-- End Personal Information -->
+            </div>
+
+            
+        </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const creditcardBtn = document.getElementById("toggle-stripe");
+    const paypalBtn = document.getElementById("toggle-paypal");
+    const paypalAlert = document.getElementById("paypal-alert");
+    const orderBtn = document.getElementById("finish-order-btn");
+    const stripeForm = document.getElementById("stripe-form");
+    const paypalForm = document.getElementById("paypal-payment-container");
+    
+
+    creditcardBtn.addEventListener("click", () => {
+        paypalAlert.style.display = "none";
+        orderBtn.style.display="block";
+        stripeForm.style.display="block";
+        paypalForm.style.display="none";
+    });
+
+    paypalBtn.addEventListener("click", () => {
+        paypalAlert.style.display = "none";
+        stripeForm.style.display="none";
+        orderBtn.style.display="block";
+        paypalForm.style.display="block";
+    });
+    
+});
+
+</script>
+
+
+<!-- stripe js code -->
+<script>
+    // Create a Stripe client
+var stripe = Stripe('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
+
+// Create an instance of Elements
+var elements = stripe.elements();
+
+// Custom styling can be passed to options when creating an Element.
+// (Note that this demo uses a wider set of styles than the guide below.)
+var style = {
+  base: {
+    color: '#242424',
+    lineHeight: '24px',
+    fontFamily: '"Lato", sans-serif',
+    fontSmoothing: 'antialiased',
+    fontSize: '14px',
+    '::placeholder': {
+      color: '#D4D4D4'
+    }
+  },
+  invalid: {
+    color: '#FF0033',
+    iconColor: '#FF0033'
+  }
+};
+
+// Create an instance of the card Element
+var card = elements.create('card', {style: style});
+
+// Add an instance of the card Element into the `card-element` <div>
+card.mount('#card-element');
+
+// Handle real-time validation errors from the card Element.
+card.addEventListener('change', function(event) {
+  var displayError = document.getElementById('card-errors');
+  if (event.error) {
+    displayError.textContent = event.error.message;
+  } else {
+    displayError.textContent = '';
+  }
+});
+
+// Handle form submission
+var form = document.getElementById('payment-form');
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  stripe.createToken(card).then(function(result) {
+    if (result.error) {
+      // Inform the user if there was an error
+      var errorElement = document.getElementById('card-errors');
+      errorElement.textContent = result.error.message;
+    } else {
+      // Send the token to your server
+      stripeTokenHandler(result.token);
+    }
+  });
+});
+
+
+</script>
+<!-- end stripe js code -->
+
+<!-- add form for officer -->
+<script type="text/javascript">
+    $("#rowAdder").click(function () {
+        newRowAdd =
+            '<div id="rowx"> <div class="input-group m-3 officer-group-form">' +
+            '<input type="text" class="officer-form-input"> ' +
+            '<div class="input-group-prepend">' +
+             '<button class="btn remove-officer" id="DeleteRow" type="button">' +
+            '<i class="bi bi-trash"></i> x </button> </div> </div> </div>';
+
+        $('#newinput').append(newRowAdd);
+    });
+    $("body").on("click", "#DeleteRow", function () {
+        $(this).parents("#rowx").remove();
+    })
+</script>
+<!-- end form -->
+
+<!-- Designator SELECT CODE -->
+<script>
+    const designatories = [
+      "LLC",
+      "Corporation",
+    ];
+
+    // Get the input and dropdown elements
+    const designatorInput = document.getElementById("designatorInput");
+    const designatorDropdown = document.getElementById("designatorDropdown");
+
+    
+     designatorInput.addEventListener("click", () => {
+        designatorDropdown.innerHTML = '';
+   designatories.forEach(designator => {
+           const option = document.createElement("option");
+         option.value = designator;
+         option.text = designator;
+         designatorDropdown.appendChild(option);
+         designatorDropdown.style.display = "block";
+         option.addEventListener("click", () => {
+            designatorInput.value = designator;
+            designatorDropdown.style.display = "none";
+          });
+     });
+    
+    
+ });
+    // Function to filter and display designatories based on input
+    function updateDropdown() {
+      const searchTerm = designatorInput.value.toLowerCase();
+      designatorDropdown.innerHTML = ''; // Clear previous options
+    
+      designatories.forEach(designator => {
+        if (designator.toLowerCase().includes(searchTerm)) {
+          const option = document.createElement("option");
+        //   option.textContent = designator;
+        option.value = designator;
+        option.text = designator;
+          option.addEventListener("click", () => {
+            designatorInput.value = designator;
+            designatorDropdown.style.display = "none";
+          });
+          designatorDropdown.appendChild(option);
+        }
+      });
+
+
+
+      if (designatorDropdown.children.length === 0) {
+        const noMatchOption = document.createElement("option");
+        noMatchOption.textContent = "No matches found";
+        noMatchOption.classList.add("disabled");
+        designatorDropdown.appendChild(noMatchOption);
+      }
+
+      designatorDropdown.style.display = "block";
+    }
+
+    // Populate the dropdown with countries when input is clicked
+    designatorInput.addEventListener("input", updateDropdown);
+
+    // Close the dropdown when clicking outside of it
+    document.addEventListener("click", (event) => {
+      if (!designatorInput.contains(event.target)) {
+        designatorDropdown.style.display = "none";
+      }
+    });
+  </script>
+
+
+<!-- END Designator SELECT CODE --> 
+
+<!-- MALE FEMALE SELECT CODE -->
+<script>
+    const countries = [
+      "Male",
+      "Female",
+    ];
+
+    // Get the input and dropdown elements
+    const genderInput = document.getElementById("genderInput");
+    const genderDropdown = document.getElementById("genderDropdown");
+
+    
+     genderInput.addEventListener("click", () => {
+        genderDropdown.innerHTML = '';
+   countries.forEach(gender => {
+           const option = document.createElement("option");
+         option.value = gender;
+         option.text = gender;
+         genderDropdown.appendChild(option);
+         genderDropdown.style.display = "block";
+         option.addEventListener("click", () => {
+            genderInput.value = gender;
+            genderDropdown.style.display = "none";
+          });
+     });
+    
+    
+ });
+    // Function to filter and display countries based on input
+    function updateDropdown() {
+      const searchTerm = genderInput.value.toLowerCase();
+      genderDropdown.innerHTML = ''; // Clear previous options
+    
+      countries.forEach(gender => {
+        if (gender.toLowerCase().includes(searchTerm)) {
+          const option = document.createElement("option");
+        //   option.textContent = gender;
+        option.value = gender;
+        option.text = gender;
+          option.addEventListener("click", () => {
+            genderInput.value = gender;
+            genderDropdown.style.display = "none";
+          });
+          genderDropdown.appendChild(option);
+        }
+      });
+
+
+
+      if (genderDropdown.children.length === 0) {
+        const noMatchOption = document.createElement("option");
+        noMatchOption.textContent = "No matches found";
+        noMatchOption.classList.add("disabled");
+        genderDropdown.appendChild(noMatchOption);
+      }
+
+      genderDropdown.style.display = "block";
+    }
+
+    // Populate the dropdown with countries when input is clicked
+    genderInput.addEventListener("input", updateDropdown);
+
+    // Close the dropdown when clicking outside of it
+    document.addEventListener("click", (event) => {
+      if (!genderInput.contains(event.target)) {
+        genderDropdown.style.display = "none";
+      }
+    });
+  </script>
+
+
+<!-- END MALE FEMALE SELECT CODE --> 
+
+
+
+<!-- COUNTRY CODE SCRIPT -->
+<script>
+  const input = document.querySelector("#mobile_code");
+  window.intlTelInput(input, {
+    initialCountry: "us",
+	separateDialCode: true,
+    utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js",
+  });
+</script>
+<!-- END COUNTRY CODE SCRIPT -->
+
+
+        <script>
+            $(document).ready(function () {
+
+var navListItems = $('div.setup-panel div a'),
+        allWells = $('.setup-content'),
+        allNextBtn = $('.nextBtn'),
+        allPrevBtn = $('.prevBtn');
+
+allWells.hide();
+
+navListItems.click(function (e) {
+    e.preventDefault();
+    var $target = $($(this).attr('href')),
+            $item = $(this);
+
+    if (!$item.hasClass('disabled')) {
+        navListItems.removeClass('btn-primary').addClass('btn-default');
+        $item.addClass('btn-primary');
+        allWells.hide();
+        $target.show();
+        $target.find('input:eq(0)').focus();
+
+         // Remove the 'head-active' class from all step headers
+         $('div.headings-dt div').removeClass('head-active');
+
+            // Get the index of the clicked navigation item and add 'head-active' class to the corresponding step header
+            var index = navListItems.index(this);
+            $('div.headings-dt div:eq(' + index + ')').addClass('head-active');
+         
+
+            // Calculate the result
+            var stepNum = 1 + index;
+            // Get the element with id 'result'
+            var numStep = document.getElementById('step-number');
+            // Set the innerHTML of the element to display the result
+            numStep.innerHTML = `${stepNum}`;
+
+        const progressBar = document.getElementById('xprogressBar');
+            const newWidth = stepNum * 25; // Calculate the new width
+            progressBar.style.width = newWidth + '%'; // Update the width of the progress bar
+
+          console.log(`${newWidth}`)
+
+
+
+    }
+});
+
+allNextBtn.click(function(){
+    var curStep = $(this).closest(".setup-content"),
+        curStepBtn = curStep.attr("id"),
+        nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+        curInputs = curStep.find("input[type='text'],input[type='url']"),
+        isValid = true;
+
+
+    // $(".form-group").removeClass("has-error");
+    // for(var i=0; i<curInputs.length; i++){
+    //     if (!curInputs[i].validity.valid){
+    //         isValid = false;
+    //         $(curInputs[i]).closest(".form-group").addClass("has-error");
+    //     }
+    // }
+
+    if (isValid)
+        nextStepWizard.removeAttr('disabled').trigger('click');
+});
+
+allPrevBtn.click(function(){
+    var curStep = $(this).closest(".setup-content"),
+        curStepBtn = curStep.attr("id"),
+        prevStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().prev().children("a");
+
+    $(".form-group").removeClass("has-error");
+    prevStepWizard.removeAttr('disabled').trigger('click');
+});
+
+$('div.setup-panel div a.btn-primary').trigger('click');
+});
+        </script>
+          
+
+</body>
+</html>
